@@ -1,0 +1,207 @@
+.c-job-board {
+  padding: 2vw;
+  /* background: #f8fafc; */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+.c-job-filters {
+  display: flex;
+  gap: 1vw;
+  margin-bottom: 2vw;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.c-job-search {
+  flex: 2;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.c-job-filters select, .c-apply-filters {
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  background: #fff;
+}
+
+
+.c-apply-filters {
+  background: #334e68;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.c-job-cards {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit,minmax(20vw, 1fr)); */
+  grid-template-columns: repeat(3,1fr);
+  gap: 1.2vw;
+  margin-bottom: 1.2vw;
+
+}
+
+.c-job-card {
+  background: #fff;
+  border-radius: 0.8rem;
+  box-shadow: 0 2px 8px #0001;
+  padding: 1rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border: 1.5px solid #e5e7eb;
+  width:auto;
+  min-width: 0;
+  height:auto;
+}
+
+.c-job-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.c-job-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.c-job-company {
+  color: #475569;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.c-bookmark-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  color: #334e68;
+  cursor: pointer;
+}
+
+.c-job-tags {
+  display: flex;
+  gap: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.c-job-tag {
+  background: #f1f5f9;
+  color: #334e68;
+  border-radius: 1rem;
+  padding: 0.3rem 1rem;
+  font-size: 0.95rem;
+}
+/* 
+.c-job-desc {
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+} */
+
+.c-job-desc {
+  max-height: 4.5rem;         /* Adjust height as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;  
+  line-clamp: 1;    /* Limit to 1 lines */
+  -webkit-box-orient: vertical;
+  line-height: 1.5;
+  color: #222;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+
+.c-job-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.c-job-posted {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.c-apply-btn {
+  background: #334e68;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c-job-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2vw;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.c-pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.c-pagination-controls button {
+  background: #fff;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.c-pagination-controls button.active {
+  background: #334e68;
+  color: #fff;
+  border: none;
+}
+
+.c-pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.c-pagination-ellipsis {
+  padding: 0 0.4rem;
+  color: #64748b;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.c-job-title {
+  font-size: 1.05rem;
+}
+.c-job-company {
+  font-size: 0.95rem;
+}
+.c-job-desc {
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+  .c-job-cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 901px) and (max-width: 1300px) {
+  .c-job-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

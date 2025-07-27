@@ -1,0 +1,165 @@
+.rectr {
+  height: 7.2vh;
+  width: 60vw;
+  border-radius: 2vh;
+  background: #334e68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:1vw auto 3vw;
+}
+
+.headingr {
+  color: white;
+
+}
+
+.gridr {
+  width: 35vw;
+  height: auto;
+  min-height: 65vh;
+  border-radius: 2vh;
+  border: 0.15vw solid #b2abab;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh;
+  padding: 2rem 0;
+}
+
+.signinr {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1vh;
+
+}
+
+/* Google Register Button */
+.googler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 60%;
+  height: 5vh;
+  border: 0.15vw solid #b2abab;
+  border-radius: 2vh;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.googler:hover {
+  background-color: #f1f1f1;
+}
+
+/* Facebook Register Button */
+.facebookr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 60%;
+  height: 5vh;
+  border: 0.15vw solid #b2abab;
+  border-radius: 2vh;
+  background-color: white;
+  cursor: pointer;
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.facebookr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Optional: uniform image height */
+/* .googler img,
+.facebookr img {
+  height: 1.5rem;
+  width: auto;
+} */
+
+.dividerr {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  margin: 2vh 5%;
+}
+
+.dividerr::before,
+.dividerr::after {
+  content: "";
+  flex: 1;
+  border-bottom: 0.15vw solid #b2abab;
+}
+
+.dividerr:not(:empty)::before {
+  margin-right: 5%;
+}
+
+.dividerr:not(:empty)::after {
+  margin-left: 5%;
+}
+
+.userinputr {
+  border: 0.15vw solid #B2ABAB;
+  width: 60%;
+  height: 4vh;
+  border-radius: 2vh;
+  font-size: 1rem;
+  padding-left: 1rem;
+}
+
+.submitr {
+  background-color: #334e68;
+  color: white;
+  border-radius: 2vh;
+  font-size: 1rem;
+  width: 25%;
+  height: 5vh;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.role-selectionr {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.role-box {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 0.15vw solid #b2abab;
+  border-radius: 1.5rem;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+
+.role-box.active,
+.role-box:hover {
+  background-color: #334e68;
+  color: white;
+  border: 1px solid #334e68;
+}
+
+.registerr {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+
+}
+
+.forgot-linkr {
+  text-decoration: none;
+}

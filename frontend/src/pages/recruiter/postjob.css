@@ -1,0 +1,121 @@
+.rp-heading-profile{
+  margin-bottom: 2rem;
+}
+
+.rp-job-post-form{
+  width: 60vw;
+  margin: 0 auto 1rem;
+  padding: 1em;
+  border-radius: 2vh;
+  border: 0.1vw solid #B2ABAB;
+  display: flex;
+  flex-direction: column;
+}
+
+.rp-post-job-input,.rp-min-salary,.rp-max-salary,.rp-post-job-discript{
+  border: 0.1vw solid #B2ABAB;
+  border-radius: 1vh;
+  font-size: 1rem;
+  padding-left: 1rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: .5rem;
+  /* width: 95%; */
+}
+
+.rp-post-job-input{
+  width: 95%;
+}
+
+.rp-min-salary,.rp-max-salary{
+  width: 40%;
+}
+
+.rp-salary-input-form{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+.rp-post-job-label{
+  color: #4A5C65;
+  font-size: 1rem;
+  margin: 0.25em 0;
+}
+
+.rp-btn-group {
+  display: flex;
+  gap: 1em;
+  margin: .25em 0;
+}
+
+.rp-type-btn {
+  padding: 0.5em 1.2em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+  background: #f0f0f0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.rp-type-btn.rp-active {
+  background: #334E68;
+  color: white;
+  border-color: #334E68;
+}
+
+.rp-post-job-discript{
+  width: 95%;
+  height: 15vh;
+  padding-top: 1rem;
+}
+
+.rp-form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.rp-btn {
+  font-size: 1em;
+  padding: 0.6em 1.4em;
+  border-radius: 0.6em;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-weight: 500;
+}
+
+/* Reset button */
+.rp-reset-btn {
+  background: white;
+  color: black;
+  border: 1px solid #aaa;
+}
+
+.rp-reset-btn:hover {
+  background: #f5f5f5;
+}
+
+/* Post button */
+.rp-post-btn {
+  background: #2f4a68;
+  color: white;
+  border: none;
+}
+
+.rp-post-btn:hover {
+  background: #1f3a58;
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled {
+  background-color: #f3f3f3;
+  color: #888;
+  cursor: not-allowed;
+}
