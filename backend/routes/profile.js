@@ -1,10 +1,9 @@
 import express from "express";
-import { saveUserProfile } from "../controllers/profile.controller.js";
-// import { authenticateJWT } from "../middleware/authMiddleware.js";
+import { saveUserProfile,getResumesByUserId} from "../controllers/profile.controller.js";
 
 const router = express.Router();
 
 router.post("/", saveUserProfile);
-// router.get("/", authenticateJWT, getUserProfile);
+router.get('/resumes/:userId', getResumesByUserId);
 
 export default router;

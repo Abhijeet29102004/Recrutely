@@ -10,6 +10,8 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
+
+
 const Oneliner = ({ icon, text }) => (
   <div className="job-oneline">
     {icon && <span className="job-icon">{icon}</span>}
@@ -67,7 +69,9 @@ const JobCard = ({
             className="job-btn primary"
             onClick={(e) => {
               e.stopPropagation(); // Prevent click from propagating to the card
-              navigate("/employer/applicants");
+              navigate(`/employer/applicants/${jobId}`);
+
+
             }}
             style={{ cursor: "pointer" }}
           >

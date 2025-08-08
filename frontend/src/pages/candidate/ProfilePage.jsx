@@ -7,6 +7,7 @@ import axios from "axios";
 import SkillModal from "../../components/SkillModal"; 
 import ExperienceModal from "../../components/ExperienceModal";
 import EducationModal from "../../components/EducationModal"; 
+import ResumeSection from "../../components/ResumeSection"; 
 
 const ProfilePage = () => {
   const navigate = useNavigate();
@@ -45,6 +46,15 @@ const ProfilePage = () => {
   // Save state
   const [isSaving, setIsSaving] = useState(false);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  
+  const [resumes, setResumes] = useState([]);
+  
+    useEffect(() => {
+      fetch("http://localhost:5050/api/profile/resumes")
+        .then((res) => res.json())
+        .then((data) => setResumes(data))
+        .catch((err) => console.error("Error fetching resumes:", err));
+    }, []);
 
   // Fetch profile on mount
   useEffect(() => {
@@ -194,7 +204,7 @@ function formatDate(dateStr) {
         <p>Profile Picture</p>
         <div className="profile-photo-box">
           {uploadedPhotoUrl ? (
-            <img src={uploadedPhotoUrl} alt="Profile" className="profile-preview-img" />
+            <img src={uploadedPhotoUrl} alt="Profile" className="profile-preview-img-p" />
           ) : (
             <div className="photo-placeholder">
               <FaCamera className="camera-icon" />
@@ -380,7 +390,7 @@ function formatDate(dateStr) {
             <small>PDF, DOCX (Max 5MB)</small>
           </div>
         </div>
-        {uploadedResumeUrl && (
+        {/* {uploadedResumeUrl && (
           <div className="uploaded-resume">
             <div className="resume-file">
               <span>📄</span>
@@ -399,7 +409,11 @@ function formatDate(dateStr) {
               </div>
             </div>
           </div>
-        )}
+        )} */}
+        
+        
+        <ResumeSection />
+        
       </div>
 
       {/* Spinner Overlay */}

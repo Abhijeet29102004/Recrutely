@@ -5,6 +5,9 @@ import profilepic from "/assets/unnamed.png";
 import menu from "/assets/menu.png";
 import "./EHeader.css"; 
 import { Link, useLocation } from "react-router-dom";
+import { useEmployerSidebar } from "../context/EmployerSidebarContext"; // ADD THIS
+import { FaChevronLeft, FaChevronRight,FaBars } from "react-icons/fa"; // ICONS
+
 
 
 
@@ -12,7 +15,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const EHeader = () => {
   const location = useLocation(); // <-- get current location
-
+  const { isSidebarOpen, toggleSidebar } = useEmployerSidebar(); // ADD THIS
+  
   // Function to get header content based on route
   const getHeaderContent = () => {
     switch (location.pathname) {
@@ -36,7 +40,10 @@ const EHeader = () => {
   return (
     <header className="header-g">
       <div className="header-left-g">
-       
+       <button className="hamburger-btn-g" onClick={toggleSidebar}>
+           {/* {isSidebarOpen ? <FaChevronLeft /> : <FaChevronRight />} */}
+           <FaBars />
+         </button>
         <div className="welcome-text-g">
           <h2>Welcome back, Employer!</h2>
           {/* <p>Here is your job details</p> */}

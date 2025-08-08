@@ -23,8 +23,8 @@ const EmployerSidebar = () => {
   };
 
   return (
-    <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
-      <div className="arrow" onClick={toggleSidebar}>
+    <aside className={`sidebar ${isSidebarOpen ? "open" : "collapsed"}`}>
+      <div className="sidebar-toggle" onClick={toggleSidebar}>
         {isSidebarOpen ? <FaChevronLeft /> : <FaChevronRight />}
       </div>
 
@@ -71,7 +71,7 @@ const EmployerSidebar = () => {
         <FaSignOutAlt className="nav-img-icon"   />
         <span>Logout</span>
       </div>
-    </div>
+    </aside>
   );
 };
 

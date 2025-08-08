@@ -23,6 +23,8 @@ import JobListing from "./pages/recruiter/joblisting";
 import PostJob from "./pages/recruiter/postjob";
 
 
+import CandidateProtectedRoute from "./pages/CandidateProtectedRoute";
+import RecruiterProtectedRoute from "./pages/RecruiterProtectedRoute";
 
 
 
@@ -37,40 +39,40 @@ function App() {
           <Route path="/" element={<HeroBanner />} />
 
 
-           <Route 
-          path = "/employer/*"
-          element={
-            <EmployerSidebarProvider>
-              <ELayout>
-                <Routes>
-                  <Route path="/rdashboard" element={<ProtectedRoute><RecruiterDashboard /></ProtectedRoute>}/>
-                  <Route path="/rprofile" element={<ProtectedRoute><RecruiterProfile /></ProtectedRoute>} />
-                  <Route path="/postjob" element={<ProtectedRoute><PostJob /></ProtectedRoute>} />
-                  <Route path="/postjob/:id" element={<ProtectedRoute><PostJob /></ProtectedRoute>} />
-                  <Route path="/joblisting" element={<ProtectedRoute><JobListing /></ProtectedRoute>} />
-                  <Route path="/applicants" element={<ProtectedRoute><ViewApplicants /></ProtectedRoute>} />
-                </Routes>
-              </ELayout>
-            </EmployerSidebarProvider>
-          }
-          />
+         <Route path="/employer/*"
+  element={
+    <EmployerSidebarProvider>
+      <ELayout>
+        <Routes>
+          <Route path="/rdashboard" element={<RecruiterProtectedRoute><RecruiterDashboard /></RecruiterProtectedRoute>} />
+          <Route path="/rprofile" element={<RecruiterProtectedRoute><RecruiterProfile /></RecruiterProtectedRoute>} />
+          <Route path="/postjob" element={<RecruiterProtectedRoute><PostJob /></RecruiterProtectedRoute>} />
+          <Route path="/postjob/:id" element={<RecruiterProtectedRoute><PostJob /></RecruiterProtectedRoute>} />
+          <Route path="/joblisting" element={<RecruiterProtectedRoute><JobListing /></RecruiterProtectedRoute>} />
+          <Route path="/applicants" element={<RecruiterProtectedRoute><ViewApplicants /></RecruiterProtectedRoute>} />
+          <Route path="/applicants/:jobId" element={<RecruiterProtectedRoute><ViewApplicants /></RecruiterProtectedRoute>} />
+        </Routes>
+      </ELayout>
+    </EmployerSidebarProvider>
+  }
+/>
 
-          <Route
-            path="/candidate/*"
-            element={
-              <SidebarProvider>
-                <Layout>
-                  <Routes>
-                    <Route path="/jobs" element={<ProtectedRoute><JobBoard /></ProtectedRoute>} />
-                    <Route path="/jobdesc/:id" element={<ProtectedRoute><JobDescription /></ProtectedRoute>} />
-                    <Route path="/application" element={<ProtectedRoute><Applications /></ProtectedRoute>} />
-                    <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-                    <Route path="/profile" element={<ProtectedRoute><ProfilePage /></ProtectedRoute>} />
-                  </Routes>
-                </Layout>
-              </SidebarProvider>
-            }
-          />
+
+          <Route path="/candidate/*"
+  element={
+    <SidebarProvider>
+      <Layout>
+        <Routes>
+          <Route path="/jobs" element={<CandidateProtectedRoute><JobBoard /></CandidateProtectedRoute>} />
+          <Route path="/jobdesc/:id" element={<CandidateProtectedRoute><JobDescription /></CandidateProtectedRoute>} />
+          <Route path="/application" element={<CandidateProtectedRoute><Applications /></CandidateProtectedRoute>} />
+          <Route path="/dashboard" element={<CandidateProtectedRoute><Dashboard /></CandidateProtectedRoute>} />
+          <Route path="/profile" element={<CandidateProtectedRoute><ProfilePage /></CandidateProtectedRoute>} />
+        </Routes>
+      </Layout>
+    </SidebarProvider>
+  }
+/>
 
          
         </Routes>
