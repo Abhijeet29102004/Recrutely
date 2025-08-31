@@ -70,8 +70,8 @@ CLOUDINARY_API_SECRET=your_cloudinary_secret
 
 1. **Clone the repository**
    ```
-   git clone <repository-url>
-   cd recrutely-registration
+   git clone https://github.com/Abhijeet29102004/Recrutely.git
+   cd recrutely
    ```
 
 2. **Install backend dependencies**
@@ -168,8 +168,7 @@ CLOUDINARY_API_SECRET=your_cloudinary_secret
 - `GET /api/applicants/:jobId`: Get job applicants (recruiters)
 
 ## Contributors
-- [Abhijeet Kumar]
-- [Pranshu Mani Tripathi]
+- Abhijeet Kumar
+- Pranshu Mani Tripathi
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
