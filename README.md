@@ -168,8 +168,8 @@ CLOUDINARY_API_SECRET=your_cloudinary_secret
 - `GET /api/applicants/:jobId`: Get job applicants (recruiters)
 
 ## Contributors
-- [Your Name]
-- [Other team members]
+- [Abhijeet Kumar]
+- [Pranshu Mani Tripathi]
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
