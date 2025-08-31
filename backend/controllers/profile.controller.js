@@ -90,18 +90,6 @@ if (resumeUrl) {
   }
 };
 
-// Fetch all resumes from user_resumes
-// export const getAllResumes = async (req, res) => {
-//   try {
-//     const result = await pool.query(
-//       'SELECT id, resume_url, uploaded_at, user_id FROM user_resumes ORDER BY uploaded_at DESC'
-//     );
-//     res.status(200).json(result.rows);
-//   } catch (error) {
-//     console.error('Error fetching resumes:', error);
-//     res.status(500).json({ message: '❌ Failed to fetch resumes' });
-//   }
-// };
 export const getResumesByUserId = async (req, res) => {
   const { userId } = req.params;
 

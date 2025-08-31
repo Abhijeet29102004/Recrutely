@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
+
 
 import HeroBanner from "./components/HeroBanner";
 import {Layout, ELayout} from "./Layout";

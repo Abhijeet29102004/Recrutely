@@ -4,15 +4,6 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
-/* 
-.overlay {
-  height: 100vh;
-  width: 100vw;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .overlay {
   position: fixed;
@@ -20,22 +11,12 @@ body {
   left: 0;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5); /* Dim background */
+  background-color: rgba(0, 0, 0, 0.5); 
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensure it floats above everything */
+  z-index: 9999; 
 }
-/* .popup {
-  width: 90%;
-  max-width: 37.5vw;
-  background: white;
-  padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
-  height:100vh;
-
-} */
 
 .popup {
   background: white;
@@ -164,8 +145,8 @@ body {
 
 .message-box textarea {
  width: 100%;
-  min-height: 6.25%; /* or 10vh for responsiveness */
-  resize: vertical; /* allows user to adjust */
+  min-height: 6.25%; 
+  resize: vertical; 
   padding: 1rem;
   font-size: 1rem;
   font-family: inherit;
@@ -190,9 +171,10 @@ body {
   cursor: pointer;
   font-size: 0.8rem;
 
+
 }
 
-.submit {
+.submit-job {
   padding: 0.6rem 1.2rem;
   background-color: #334b64;
   color: white;
@@ -200,24 +182,66 @@ body {
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 0.8rem;
+
+
+}
+
+@media (max-width: 1024px) {
+  .popup {
+    width: 90%;
+    max-width: 90%; /* take almost full width */
+    padding: 1rem; /* less padding for smaller screens */
+    border-radius: 0.75rem;
+    max-height: 70%;
+  }
+
+  .popup-title {
+    font-size: 1.2rem; /* smaller title */
+    text-align: center;
+  }
+
+  .upload-box {
+    padding: 1rem;
+    font-size: 0.9rem; /* smaller text */
+  }
+
+  .upload-box p {
+    white-space: normal; /* allow text wrapping */
+  }
+
+  .upload-button {
+    width: 100%; /* button spans full width */
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .resume-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .resume-actions {
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .message-box textarea {
+    font-size: 0.9rem;
+    min-height: 100px; /* bigger text area for mobile */
+  }
+
+  .popup-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cancel, 
+  .submit-kp {
+    width: 100%; /* full-width buttons for touch ease */
+  }
 }
 
 
 
-
-/* .file-input {
-  display: none; 
-}
-
-.upload-button {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background-color: #1e3a8a;
-  color: white;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: 500;
-  margin-top: 1rem;
-  text-align: center;
-} */
 

@@ -78,7 +78,7 @@
 
 // export default Sidebar;
 import React from "react";
-import "./Sidebar.css";
+import "./EmployerSidebar.css";
 import { useSidebar } from "../context/SidebarContext";
 import {
   FaHome,
@@ -118,19 +118,39 @@ const Sidebar = () => {
       </div>
 
       <nav className="sidebar-nav">
-        <NavLink className="nav-item" to="/candidate/dashboard">
+        <NavLink
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active-link" : ""}`
+          }
+          to="/candidate/dashboard"
+        >
           <FaHome className="nav-icon" />
           <span className="nav-text">Dashboard</span>
         </NavLink>
-        <NavLink className="nav-item" to="/candidate/profile">
+        <NavLink
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active-link" : ""}`
+          }
+          to="/candidate/profile"
+        >
           <FaUser className="nav-icon" />
           <span className="nav-text">Profile</span>
         </NavLink>
-        <NavLink className="nav-item" to="/candidate/application">
+        <NavLink
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active-link" : ""}`
+          }
+          to="/candidate/application"
+        >
           <FaClipboardList className="nav-icon" />
           <span className="nav-text">Applications</span>
         </NavLink>
-        <NavLink className="nav-item" to="/candidate/jobs">
+        <NavLink
+          className={({ isActive }) =>
+            `nav-item ${isActive ? "active-link" : ""}`
+          }
+          to="/candidate/jobs"
+        >
           <FaBriefcase className="nav-icon" />
           <span className="nav-text">Jobs</span>
         </NavLink>

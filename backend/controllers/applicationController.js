@@ -57,6 +57,7 @@ export const getApplicantsByJobId = async (req, res) => {
 
 export const getApplicationsByUserId = async (req, res) => {
   const { userId } = req.params;
+  
 
   try {
     const query = `

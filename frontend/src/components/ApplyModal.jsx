@@ -174,7 +174,7 @@ const handleResumeInputChange = async (e) => {
           <button className="cancel" onClick={onClose}>
             Cancel
           </button>
-          <button className="submit" onClick={handleSubmit}>
+          <button className="submit-job" onClick={handleSubmit}>
             Submit
           </button>
         </div>
