@@ -54,6 +54,7 @@ function RegisterGrid() {
         body: JSON.stringify(bodyData),
       });
 
+
       const data = await res.json();
 
        if (res.ok) {

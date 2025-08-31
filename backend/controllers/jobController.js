@@ -2,7 +2,16 @@
 import pool  from "../db/db.js";
 import { deleteJobById } from "../models/jobModel.js";
 export const postJob = async (req, res) => {
+
+ 
   try {
+
+    //   const recruiterId = req.user?.id;
+    // if (!recruiterId) {
+    //   return res.status(401).json({ message: "Recruiter not authenticated" });
+    // }
+  
+
     const {
       title,
       company,

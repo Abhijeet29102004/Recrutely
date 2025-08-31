@@ -4,6 +4,7 @@ import "./login.css";
 import google from "/assets/googlelogin.png";
 import facebook from "/assets/facebook.png";
 
+
 function Rectangle() {
   return (
     <div className="rect">

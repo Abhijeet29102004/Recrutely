@@ -75,6 +75,14 @@ export const saveUserProfile = async (req, res) => {
       );
     }
 
+    // 🔽 NEW CODE: Also insert resume into `user_resumes` table
+if (resumeUrl) {
+  await pool.query(
+    "INSERT INTO user_resumes (user_id, resume_url) VALUES ($1, $2)",
+    [userId, resumeUrl]
+  );
+}
+
     res.status(200).json({ message: "✅ Profile saved successfully" });
   } catch (error) {
     console.error("Error saving profile:", error);
@@ -82,3 +90,18 @@ export const saveUserProfile = async (req, res) => {
   }
 };
 
+export const getResumesByUserId = async (req, res) => {
+  const { userId } = req.params;
+
+  try {
+    const result = await pool.query(
+      'SELECT id, resume_url, uploaded_at, user_id FROM user_resumes WHERE user_id = $1 ORDER BY uploaded_at DESC',
+      [userId]
+    );
+
+    res.status(200).json(result.rows);
+  } catch (error) {
+    console.error('Error fetching resumes:', error);
+    res.status(500).json({ message: '❌ Failed to fetch resumes' });
+  }
+};

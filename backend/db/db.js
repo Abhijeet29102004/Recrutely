@@ -5,16 +5,27 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-});
+// for local
+// const pool = new Pool({
+//   connectionString: process.env.DATABASE_URL,
+// });
 
+// for supabase
 // const pool = new Pool({
 //   connectionString: process.env.DATABASE_URL,
 //   ssl: {
 //     rejectUnauthorized: false, // required for Supabase
 //   },
 // });
+
+
+// for aws
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false,
+  },
+});
 
 
 

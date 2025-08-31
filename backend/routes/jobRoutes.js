@@ -1,10 +1,11 @@
 // routes/jobRoutes.js
 import express from 'express';
 import { postJob,fetchJobs,deleteJob,getDashboardStats,getJobById,updateJobById } from '../controllers/jobController.js';
+import { verifyToken,verifyRecruiter } from '../middleware/authMiddleware.js';
 
 const router = express.Router();
-router.post('/post-job', postJob);
-router.get('/listings', fetchJobs);
+router.post('/post-job',postJob);
+router.get('/listings',fetchJobs);
 router.delete('/:id', deleteJob);
 router.get('/dashboard-stats', getDashboardStats);
 router.get('/:id', getJobById);

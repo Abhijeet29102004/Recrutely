@@ -27,6 +27,8 @@ const PostJob = () => {
   const optionsType = ["Full-Time", "Part-Time", "Contract", "Internship"];
 
   const { id } = useParams(); // Will be undefined for new job, or have job ID
+  const us = JSON.parse(localStorage.getItem("user"));
+  const userId = us?.id;
   const isEditMode = Boolean(id);
 
   useEffect(() => {
@@ -86,6 +88,7 @@ const PostJob = () => {
       responsibilities,
       skills,
       perks,
+
     };
 
     try {
